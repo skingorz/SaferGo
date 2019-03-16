@@ -4,8 +4,8 @@ var User = require('../models/user');
 var api = require('../lib/api');
 
 router.post('/', (req, res, next) =>{
-    let loginname = req.body.loginname;
-    let password = req.body.password;
+    let loginname = req.query.loginname;
+    let password = req.query.password;
 
     let p1 = api.findOne(User, {username: loginname});
     let p2 = api.findOne(User, {email: loginname});

@@ -19,7 +19,8 @@ var UserSchema = new mongoose.Schema({
     created_at: String,
     individuality: String,
     birthplace: String,
-    livePlace: String
+    livePlace: String,
+    msgTemplate: String
 });
 
 var UserModel = mongoose.model("user", UserSchema);

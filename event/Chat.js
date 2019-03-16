@@ -1,7 +1,10 @@
 
 var Chat = (data, onlineUser) => {
-    let from = data.from;
-    let to = data.to;
+
+    dataJSON = JSON.parse(data)
+
+    let from = dataJSON.from;
+    let to = dataJSON.to;
 
     //接受消息方在线
     if(to in onlineUser){
